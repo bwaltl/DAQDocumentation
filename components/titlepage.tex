@@ -1,0 +1,68 @@
+% The titlepage for the CAMP report document.
+% Included by MAIN.TEX
+
+
+%--------------------------------------------------
+% The title page
+%--------------------------------------------------
+
+% correct BCOR - undo at the end !!!
+\def\bcorcor{0.15cm}
+\addtolength{\hoffset}{\bcorcor}
+
+\thispagestyle{empty}
+
+ \vspace{10mm}
+\begin{center}
+	       \oTUM{4cm}
+	   
+	   \vspace{5mm}     
+	%   \huge FAKULT{\"A}T F{\"U}R INFORMATIK\\ 
+	   \huge INSTITUT F{\"U}R INFORMATIK \\
+	   \vspace{0.5cm}
+	 \large DER TECHNISCHEN UNIVERSIT{\"A}T M{\"U}NCHEN\\
+        
+	\end{center}
+		
+
+\vspace{10mm}
+\begin{center}
+
+   {\Large \doctype}
+
+  \vspace{10mm}
+  
+  {\LARGE \title}\\
+  
+  
+  \vspace{10mm}
+  
+  
+%  {\LARGE  \titleGer}\\
+  
+  
+  \vspace{10mm}
+
+    %\hfill
+    \begin{tabular}{ll}
+	   \Large Authors:     & \Large Thomas Reschenhofer \\[2mm]
+	   \Large             & \Large Bernhard Waltl \\[2mm]
+	   \Large Supervisor:    & \Large Prof. Dr. Peter Fierlinger \\[2mm]				
+	   \Large Advisor:	& \Large Dr. Michael Marino\\[2mm]
+	   \Large Date:       & \Large April 15, 2013
+	 \end{tabular}
+	 
+	 \vspace{15mm}
+	 
+	 \begin{figure}[h!]
+  \centering
+	\includegraphics[width=3cm]{images/Informatik.png}
+	\hspace{1cm}
+	\includegraphics[width=3cm]{images/Physik2.png}
+  \end{figure}
+   
+
+\end{center}
+
+% undo BCOR correction
+\addtolength{\hoffset}{\bcorcor}

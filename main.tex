@@ -1,0 +1,77 @@
+ % The main file for CAMP reports
+ % Don't put any content in here. 
+ % Don't even include content files by using \input or \inlcude. 
+ % Put your content to TEXT.TEX or include it there using \input.
+ % Uses:
+ %		SETTINGS.TEX	contains the settings for this document
+ %		COMMANDS.TEX	contains commands which can be used while writing
+ %		INFO.TEX			contains the author, title and so on for the cover
+ %		COVER.TEX			formats the front cover of the document
+ %		ABSTRACT.TEX	contains the abstract to be included (if needed)
+ %		TEXT.TEX			contains the actual content of the document
+ %		BIB.BIB				containt the BibTeX entries for the document
+ 
+ 
+%% Draft document mode
+%% Final document
+\documentclass[11pt,headsepline,footsepline,footinclude=false,DIV13]{scrreprt}
+
+% KOMA-Optionen:
+%  bibtotoc: include bibliography in table of contents
+%  idxtotoc: include index in table of contents
+%  headsepline: use horizontalline under heading
+%  BCOR: binding correcion (Bindungskorrektur) (e.g.: BCOR5mm)
+%  DIV: Number of sheet sections (used for layout) (e.g.: DIV12) 
+
+
+
+% include title and author information for the cover
+\input{components/info}
+
+% include settings
+\input{components/settings}
+
+% include commands
+\input{components/commands}
+
+
+\begin{document}
+
+	\input{components/titlepage}
+	\tableofcontents
+  
+		% ---------------------------------------------------------------------------
+		%
+		%Introduction and Background Theory
+		%
+		% ---------------------------------------------------------------------------
+		
+		\input{chapters/Abstract}	
+		\input{chapters/Introduction}		
+		\input{chapters/DAQArchitecture}	
+		\input{chapters/CouchDB}
+		\input{chapters/LabView}
+		\input{chapters/CouchApp}
+		%\input{chapters/Conclusion}
+		
+	%\bibliographystyle{styles/plain.bst}
+  \bibliography{bibliography/literature}
+		% ---------------------------------------------------------------------------
+		%
+		% Appendix
+		%
+		% ---------------------------------------------------------------------------
+		
+		%\part*{Appendix}
+		\newpage
+		%\addcontentsline{toc}{part}{Appendix}
+		
+		
+		
+		%\input{chapters/oneAppendix}
+		
+	  \clearemptydoublepage
+	
+ 
+\end{document}
+
